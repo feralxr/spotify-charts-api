@@ -101,15 +101,18 @@ print(data["entries"][0])
 
 ```
 
-Project Structure
-.
+Project Structure  
+```
+.  
 ├── .env  
 ├── server.js  
 ├── package.json  
 ├── spotify_session/  
-└── README.md  
+└── README.md
 
-Notes and Limitations
+```
+
+# Notes and Limitations
 
 Spotify may change internal APIs at any time
 
