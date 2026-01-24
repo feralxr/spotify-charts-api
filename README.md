@@ -48,15 +48,15 @@ No HTML scraping is involved.
 
 # Tech Stack
 
--Node.js
+- Node.js
 
--Express
+- Express
 
--Puppeteer Extra
+- Puppeteer Extra
 
--puppeteer-extra-plugin-stealth
+- puppeteer-extra-plugin-stealth
 
--dotenv
+- dotenv
 
 # Installation
 ```
