@@ -56,8 +56,6 @@ No HTML scraping is involved.
 
 - puppeteer-extra-plugin-stealth
 
-- dotenv
-
 # Installation
 ```
 git clone https://github.com/yourusername/spotify-charts-api.git
@@ -94,8 +92,7 @@ print(data["entries"][0])
 
 Project Structure  
 ```
-.  
-├── .env  
+.   
 ├── server.js  
 ├── package.json  
 ├── spotify_session/  
