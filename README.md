@@ -48,18 +48,19 @@ No HTML scraping is involved.
 
 # Tech Stack
 
-Node.js
+-Node.js
 
-Express
+-Express
 
-Puppeteer Extra
+-Puppeteer Extra
 
-puppeteer-extra-plugin-stealth
+-puppeteer-extra-plugin-stealth
 
-dotenv
+-dotenv
 
 # Installation
-```git clone https://github.com/yourusername/spotify-charts-api.git
+```
+git clone https://github.com/yourusername/spotify-charts-api.git
 cd spotify-charts-api
 npm install
 ```
@@ -88,6 +89,8 @@ SPOTIFY_PASSWORD=yourpassword
 ```
 
 Example Client (Python)
+
+```
 import requests
 
 url = "http://localhost:3000/global_weekly"
@@ -96,13 +99,15 @@ data = response.json()
 
 print(data["entries"][0])
 
+```
+
 Project Structure
 .
-├── .env
-├── server.js
-├── package.json
-├── spotify_session/
-└── README.md
+├── .env  
+├── server.js  
+├── package.json  
+├── spotify_session/  
+└── README.md  
 
 Notes and Limitations
 
