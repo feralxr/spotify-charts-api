@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
@@ -22,7 +21,7 @@ let browser;
 
 async function initBrowser() {
     if (!browser || !browser.isConnected()) {
-        console.log('🚀 Launching shared browser...');
+        console.log('Launching shared browser...');
         browser = await puppeteer.launch({
             headless: true,
             userDataDir: USER_DATA_DIR,
@@ -49,7 +48,7 @@ async function fetchSpecificChart(targetUrl, chartName) {
                         const buffer = await response.buffer();
                         chartData = JSON.parse(buffer.toString());
                         // LOG 1: Interception Success
-                        console.log(`   🎯 [Internal] Intercepted JSON for ${chartName}`);
+                        console.log(`[Internal] Intercepted JSON for ${chartName}`);
                     } catch (e) { }
                 }
             }
@@ -69,7 +68,7 @@ async function fetchSpecificChart(targetUrl, chartName) {
         return chartData;
 
     } catch (error) {
-        console.error(`   ❌ Error on ${chartName}:`, error.message);
+        console.error(`Error on ${chartName}:`, error.message);
         return null;
     } finally {
         await page.close();
@@ -84,26 +83,27 @@ app.get('/:chart_id', async (req, res) => {
     const time = new Date().toLocaleTimeString();
 
     if (!targetUrl) {
-        console.log(`[${time}] ⚠️  404 Request for unknown chart: ${chartId}`);
+        console.log(`[${time}] 404 Request for unknown chart: ${chartId}`);
         return res.status(404).json({ error: "Invalid Endpoint" });
     }
 
-    console.log(`[${time}] 📥 Received request: /${chartId}`);
+    console.log(`[${time}] Received request: /${chartId}`);
 
     const data = await fetchSpecificChart(targetUrl, chartId);
 
     if (data) {
         // LOG 2: Request Fulfillment Success
-        console.log(`[${time}] ✅ FULFILLED: Sent ${chartId} data to client.`);
+        console.log(`[${time}] FULFILLED: Sent ${chartId} data to client.`);
         res.json(data);
     } else {
-        console.log(`[${time}] ❌ FAILED: Could not fetch ${chartId}.`);
+        console.log(`[${time}] FAILED: Could not fetch ${chartId}.`);
         res.status(500).json({ error: "Failed to fetch data." });
     }
 });
 
 app.listen(PORT, async () => {
-    console.log(`\n🟢 Server Ready on Port ${PORT}`);
-    console.log(`   Waiting for Python requests...\n`);
+    console.log(`\n Server Ready on Port ${PORT}`);
+    console.log(`Waiting for Python requests...\n`);
     await initBrowser();
+
 });
