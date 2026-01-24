@@ -79,16 +79,7 @@ The server will run on:
 
 A shared browser instance is initialized on startup, and session data is stored in the spotify_session directory.
 
-Environment Variables
-
-Create a .env file if needed:
-
-```
-SPOTIFY_EMAIL=youremail
-SPOTIFY_PASSWORD=yourpassword
-```
-
-Example Client (Python)
+# Example Client (Python)
 
 ```
 import requests
