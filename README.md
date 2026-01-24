@@ -16,7 +16,10 @@ Persistent session using a user data directory
 
 Simple REST-style endpoints
 
-Suitable for Python, data analysis, and automation workflows
+Suitable for Python, data analysis, and automation workflows  
+
+**Currently configured for Daily US and Global and Weekly US and Global.
+Can be easily changed as per preference**
 
 Available Endpoints
 Endpoint	Description
@@ -65,6 +68,11 @@ npm install
 
 # Usage
 
+Change 
+```headless: true```  
+to  
+```headless: false```
+
 Start the server:
 
 ```node server.js```
@@ -75,7 +83,7 @@ The server will run on:
 ```http://localhost:3000```
 
 
-A shared browser instance is initialized on startup, and session data is stored in the spotify_session directory.
+A shared browser instance is initialized on startup, login your account on charts.spotify.com and session data is stored in the spotify_session directory.
 
 # Example Client (Python)
 
