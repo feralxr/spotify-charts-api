@@ -21,12 +21,12 @@ Suitable for Python, data analysis, and automation workflows
 **Currently configured for Daily US and Global and Weekly US and Global.
 Can be easily changed as per preference**
 
-Available Endpoints
-Endpoint	Description
-/global_daily	Global Daily Charts
-/global_weekly	Global Weekly Charts
-/usa_daily	USA Daily Charts
-/usa_weekly	USA Weekly Charts
+Available Endpoints  
+Endpoint	Description  
+- /global_daily	Global Daily Charts  
+- /global_weekly	Global Weekly Charts  
+- /usa_daily	USA Daily Charts  
+- /usa_weekly	USA Weekly Charts  
 
 Example:
 
