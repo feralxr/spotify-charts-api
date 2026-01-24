@@ -4,7 +4,7 @@ This allows programmatic access to Global and USA daily/weekly charts without sc
 
 This project is not affiliated with or endorsed by Spotify.
 
-Features
+# Features
 
 Fetch Spotify Charts as raw JSON
 
@@ -27,12 +27,12 @@ Endpoint	Description
 
 Example:
 
-GET http://localhost:3000/global_daily
+```GET http://localhost:3000/global_daily```
 
 
 Returns Spotify’s internal chart JSON response.
 
-How It Works
+# How It Works
 
 Launches a headless Chromium browser using Puppeteer
 
@@ -46,7 +46,7 @@ Returns the data to the client while keeping the browser alive
 
 No HTML scraping is involved.
 
-Tech Stack
+# Tech Stack
 
 Node.js
 
@@ -58,21 +58,22 @@ puppeteer-extra-plugin-stealth
 
 dotenv
 
-Installation
-git clone https://github.com/yourusername/spotify-charts-api.git
+# Installation
+```git clone https://github.com/yourusername/spotify-charts-api.git
 cd spotify-charts-api
 npm install
+```
 
-Usage
+# Usage
 
 Start the server:
 
-node server.js
+```node server.js```
 
 
 The server will run on:
 
-http://localhost:3000
+```http://localhost:3000```
 
 
 A shared browser instance is initialized on startup, and session data is stored in the spotify_session directory.
@@ -81,10 +82,10 @@ Environment Variables
 
 Create a .env file if needed:
 
-NODE_ENV=production
-
-
-No credentials are required.
+```
+SPOTIFY_EMAIL=youremail
+SPOTIFY_PASSWORD=yourpassword
+```
 
 Example Client (Python)
 import requests
@@ -97,6 +98,7 @@ print(data["entries"][0])
 
 Project Structure
 .
+├── .env
 ├── server.js
 ├── package.json
 ├── spotify_session/
@@ -112,7 +114,7 @@ First request may be slower due to browser initialization
 
 Intended for personal, educational, or research use
 
-Legal Disclaimer
+# Legal Disclaimer
 
 This project accesses undocumented internal APIs used by Spotify’s web application.
 Use at your own risk and comply with applicable laws and terms of service.
