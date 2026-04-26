@@ -1,6 +1,6 @@
 # Spotify Charts API
 An Express and Puppeteer-based server that exposes Spotify Charts data as JSON by intercepting Spotify’s internal network requests.
-This allows programmatic access to Global and USA daily/weekly charts without scraping HTML.
+This allows programmatic access to any charts without scraping HTML.
 
 This project is not affiliated with or endorsed by Spotify.
 
